@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "doubanFM_lyrics",
+  "version": "1.0",
+  "description": "to show lyrics in doubanFM",
+  "browser_action":{
+	  "default_icon":"icons/clock19.png"
+    },
+  "content_scripts": [
+  	{
+	  "matches": ["http://douban.fm/"],
+	  "js": ["files/jquery-1.9.1.min.js","files/lyrics.js"],
+	  "runat": "document_end"
+  	}
+  ],
+  "permissions": ["tabs", "http://*/*", "https://*/*"]
+}
